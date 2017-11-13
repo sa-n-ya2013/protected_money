@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::middleware('auth:api')->get('/categories', 'CategoriesController@get');
+
+Route::get('/auth', 'UserController@login');
+
+Route::middleware('auth')->get('/user', function (Request $request) {
+    return Auth::user();
 });
+
+Route::middleware('auth')->get('/categories/list', 'CategoriesController@get');

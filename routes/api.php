@@ -13,9 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/categories', 'CategoriesController@get');
-
-
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//Route::middleware('auth:api')->get('/categories', 'CategoriesController@get');
+//
+//Route::get('/auth', 'UserController@login');
+//
+//Route::/*middleware('auth:api')->*/get('/user', function (Request $request) {
+//    echo $request->getSession()->getName();
 //    return $request->user();
 //});
